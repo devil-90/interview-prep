@@ -5,7 +5,8 @@ class Solution:
         ans = 0
         while(low<high):
             amount = (high-low)*min(height[low], height[high])
-            ans = max(ans, amount)
+            if amount>ans:
+                ans = amount
             if(height[low]<height[high]):
                 low+=1
             else:
