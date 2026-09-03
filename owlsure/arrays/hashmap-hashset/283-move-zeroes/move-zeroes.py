@@ -7,8 +7,10 @@ class Solution:
 
         for i in range(len(nums)):
             if nums[i] != 0:
-                temp = nums[i]
-                nums[i] = nums[z]
-                nums[z] = temp
+                # temp = nums[i]
+                # nums[i] = nums[z]
+                # nums[z] = temp
+                # z+=1
+                nums[i], nums[z] = nums[z], nums[i]
                 z+=1
 
