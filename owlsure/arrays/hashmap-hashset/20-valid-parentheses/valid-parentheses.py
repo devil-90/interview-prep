@@ -1,6 +1,7 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-
+        if len(s)%2 !=0:
+            return False
         stack = []
         braces = {
             ")":"(",
@@ -13,9 +14,9 @@ class Solution:
             else:
                 if not stack:
                     return False
-                top = stack[-1]
-                if top == braces[brace]:
-                    stack.pop(len(stack)-1)
+                
+                if stack[-1] == braces[brace]:
+                    stack.pop()
                 else:
                     return False
         return len(stack) == 0
