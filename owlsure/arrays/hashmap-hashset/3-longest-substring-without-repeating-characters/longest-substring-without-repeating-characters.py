@@ -4,7 +4,6 @@ class Solution:
         length = 0
         left = 0
         for right in range(len(s)):
-            curr = 0
             if s[right] in seen:
                 while s[right] in seen:
                     
